@@ -4,7 +4,7 @@ public class Valuta {
 	private String naziv;
 	private String skraceniNaziv;
 	private String datum;
-	private Double kurs;
+	private double kurs;
 	
     public Valuta() {
 	}
@@ -27,12 +27,28 @@ public class Valuta {
 	public void setDatum(String datum) {
 		this.datum = datum;
 	}
-	public String getKurs() {
+	public double getKurs() {
 		return kurs;
 	}
-	public void setKurs(String kurs) {
+	public void setKurs(double kurs) {
 		this.kurs = kurs;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Danasnja valuta:"+ skraceniNaziv+": "+kurs;
+	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
 }

@@ -4,7 +4,7 @@ public class Valuta {
 	private String naziv;
 	private String skraceniNaziv;
 	private String datum;
-	private String kurs;
+	private Double kurs;
 	
     public Valuta() {
 	}

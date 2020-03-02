@@ -8,8 +8,7 @@ public class ServisMenjacnice implements IOperacijeZaKurs{
 
 	@Override
 	public void dodajKurs(Date datum, double kurs) {
-		// TODO Auto-generated method stub
-		
+		//ja sam drugaciji kod		
 	}
 
 	@Override

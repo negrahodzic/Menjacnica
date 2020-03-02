@@ -1,4 +1,4 @@
-package valute;
+package bibliotekaKlasa;
 
 public class Valuta {
 	private String naziv;

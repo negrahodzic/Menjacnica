@@ -3,8 +3,7 @@ package bibliotekaKlasa;
 public class Valuta {
 	private String naziv;
 	private String skraceniNaziv;
-	private String datum;
-	private double kurs;
+	private Kurs kurs;
 	
     public Valuta() {
 	}
@@ -21,23 +20,19 @@ public class Valuta {
 	public void setSkraceniNaziv(String skraceniNaziv) {
 		this.skraceniNaziv = skraceniNaziv;
 	}
-	public String getDatum() {
-		return datum;
-	}
-	public void setDatum(String datum) {
-		this.datum = datum;
-	}
-	public double getKurs() {
+	
+	public Kurs getKurs() {
 		return kurs;
 	}
-	public void setKurs(double kurs) {
+
+	public void setKurs(Kurs kurs) {
 		this.kurs = kurs;
 	}
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Danasnja valuta:"+ skraceniNaziv+": "+kurs;
+		return "Danasnja valuta:"+ skraceniNaziv+": "+kurs.getKurs();
 	}
 	
 	@Override

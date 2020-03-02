@@ -13,24 +13,32 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv == null) 
+			throw new RuntimeException("Naziv ne sme biti null");
 		this.naziv = naziv;
 	}
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if(naziv == null) 
+			throw new RuntimeException("Skraceni naziv ne sme biti null");
 		this.skraceniNaziv = skraceniNaziv;
 	}
 	public String getDatum() {
 		return datum;
 	}
 	public void setDatum(String datum) {
+		if(naziv == null) 
+			throw new RuntimeException("Datum ne sme biti null");
 		this.datum = datum;
 	}
 	public double getKurs() {
 		return kurs;
 	}
 	public void setKurs(double kurs) {
+		if(naziv == null) 
+			throw new RuntimeException("kurs ne sme biti null");
 		this.kurs = kurs;
 	}
 	

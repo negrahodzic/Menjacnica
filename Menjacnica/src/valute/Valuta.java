@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import bibliotekaKlasa.Kurs;
 
 public class Valuta {
+	//KRAAAJJ spremno za 1.0.0 !
 	private String naziv;
 	private String skraceniNaziv;
 	private LinkedList<Kurs> kurs;

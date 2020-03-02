@@ -1,11 +1,13 @@
 package valute;
 
+import java.util.LinkedList;
+
 import bibliotekaKlasa.Kurs;
 
 public class Valuta {
 	private String naziv;
 	private String skraceniNaziv;
-	private Kurs kurs;
+	private LinkedList<Kurs> kurs;
 	
     public Valuta() {
 	}
@@ -22,16 +24,16 @@ public class Valuta {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
-		if(naziv == null) 
+		if(skraceniNaziv == null) 
 			throw new RuntimeException("Skraceni naziv ne sme biti null");
 		this.skraceniNaziv = skraceniNaziv;
 	}
 
-	public Kurs getKurs() {
+	public LinkedList<Kurs> getKurs() {
 		return kurs;
 	}
-	public void setKurs(Kurs kurs) {
-		if(naziv == null) 
+	public void setKurs(LinkedList<Kurs> kurs) {
+		if(kurs == null) 
 			throw new RuntimeException("kurs ne sme biti null");
 		this.kurs = kurs;
 	}
@@ -39,7 +41,7 @@ public class Valuta {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Danasnja valuta:"+ skraceniNaziv+": "+kurs.getKurs();
+		return "Danasnja valuta:"+ skraceniNaziv+": "+kurs.getFirst(); // treba neki indeks ili datum
 	}
 	
 	@Override

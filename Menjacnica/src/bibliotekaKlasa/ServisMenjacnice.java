@@ -1,26 +1,33 @@
 package bibliotekaKlasa;
 
 import java.util.Date;
+import java.util.LinkedList;
 
 import operacije.IOperacijeZaKurs;
 
 public class ServisMenjacnice implements IOperacijeZaKurs{
 
+	LinkedList<Kurs> kList = new LinkedList<Kurs>();
+
 	@Override
 	public void dodajKurs(Date datum, double kurs) {
-		//ja sam drugaciji kod		
+		Kurs k = new Kurs(datum, kurs); 
+		kList.add(k);
 	}
 
 	@Override
 	public void izbrisiKurs(Date datum) {
-		// TODO Auto-generated method stub
-		
+		for(Kurs k : kList)
+			if(k.getDatum().equals(datum)) 
+				kList.remove(k);
 	}
 
 	@Override
 	public Kurs vratiKurs(Date datum) {
-		// TODO Auto-generated method stub
-		return null;
+		for(Kurs k : kList)
+			if(k.getDatum().equals(datum)) 
+				return k;
+		throw new RuntimeException("Nije pronadjen taj kurs.");
 	}
 
 }
